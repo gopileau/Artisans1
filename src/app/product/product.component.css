@@ -1,0 +1,26 @@
+.content {
+    font-family: 'Bubbleboddy Neue', sans-serif; 
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bubbleboddy Neue', sans-serif; 
+    margin-bottom: 20px;
+    color: #DA001E;
+}
+
+.product-details {
+    margin-top: 20px;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+

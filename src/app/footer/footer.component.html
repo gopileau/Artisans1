@@ -1,0 +1,14 @@
+<footer>
+    <div class="social-links">
+      <ul>
+        <li *ngFor="let link of socialLinks">
+          <a [href]="link.url" target="_blank">
+            <img [src]="link.icon" alt="{{ link.name }} icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+</footer>
+
+  
+  

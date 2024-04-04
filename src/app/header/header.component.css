@@ -1,0 +1,76 @@
+/* Styles communs */
+header { 
+    font-family: 'Bubbleboddy Neue', sans-serif;/* Couleur de fond du header */
+    background-color: rgba(128, 128, 128, 0.2); 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Styles pour le conteneur du logo */
+.logo-container {/* Couleur d'arrière-plan du logo */
+    padding: 10px; /* Ajoutez un peu d'espace autour du logo */
+}
+
+/* Styles pour le logo lui-même */
+.logo-img {
+    height: 50px; /* Hauteur du logo */
+    width: 50px; /* Largeur du logo */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #151217; /* Couleur du texte des liens */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #DA001E; 
+}
+
+.mobile-menu {
+    display: none; 
+    font-family: 'Comfortaa', cursive;
+}
+
+.desktop-menu ul li a {
+    font-family: 'Comfortaa', cursive; 
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

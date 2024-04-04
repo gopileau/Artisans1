@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Figurine 1",
+      "description": "Description de la figurine 1",
+      "price": 29.99,
+      "imageUrl": "assets/images/figurine1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Figurine 2",
+      "description": "Description de la figurine 2",
+      "price": 19.99,
+      "imageUrl": "assets/images/figurine2.jpg"
+    }
+]
+
+  
