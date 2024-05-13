@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../services/product.service';
-import { Product } from '../services/product.model';
+import { TopArtisansService } from '../top-artisans.service';
 
 @Component({
   selector: 'app-home',
@@ -8,38 +7,52 @@ import { Product } from '../services/product.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title = 'Au petit village';
-  products: Product[] = [];
-  filteredProducts: Product[] = []; 
-  searchTerm: string = '';
+  topArtisans: any[] = [];
+  allArtisans: any[] = []; 
 
-  constructor(private productService: ProductService) { }
+  constructor(private topArtisansService: TopArtisansService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((products: Product[]) => {
-      this.products = products;
-      this.filteredProducts = [...this.products];
-    });
+    this.getTopArtisans();
+    this.getAllArtisans(); 
   }
 
-
-  sortAscending(): void {
-    this.filteredProducts.sort((a, b) => a.price - b.price);
+  getTopArtisans(): void {
+    this.topArtisansService.getTopArtisans()
+      .subscribe(artisans => {
+        this.topArtisans = artisans.sort((a, b) => b.rating - a.rating);
+      });
   }
 
-
-  sortDescending(): void {
-    this.filteredProducts.sort((a, b) => b.price - a.price);
+  getAllArtisans(): void {
+    this.topArtisansService.getAllArtisans()
+      .subscribe(artisans => this.allArtisans = artisans);
   }
+  searchArtisans(query: string): void {
+   
+  }  
 
- 
-  searchByName(event: Event): void {
-    event.preventDefault(); 
-    this.filteredProducts = this.products.filter(product =>
-      product.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+  getStars(rating: number): number[] {
+    const stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(i);
+    }
+    return stars;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

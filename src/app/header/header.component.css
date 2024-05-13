@@ -1,21 +1,17 @@
-/* Styles communs */
 header { 
-    font-family: 'Bubbleboddy Neue', sans-serif;/* Couleur de fond du header */
-    background-color: rgba(128, 128, 128, 0.2); 
+    background-color: #fff; 
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/* Styles pour le conteneur du logo */
-.logo-container {/* Couleur d'arrière-plan du logo */
-    padding: 10px; /* Ajoutez un peu d'espace autour du logo */
+.logo-container {
+    padding: 10px; 
 }
 
-/* Styles pour le logo lui-même */
 .logo-img {
-    height: 50px; /* Hauteur du logo */
-    width: 50px; /* Largeur du logo */
+    height: 50px; 
+    width: 120px;
 }
 
 
@@ -31,32 +27,90 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #151217; /* Couleur du texte des liens */
+    color: #151217; 
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #DA001E; 
+    color: #0074c7; 
 }
-
 .mobile-menu {
     display: none; 
-    font-family: 'Comfortaa', cursive;
-}
-
-.desktop-menu ul li a {
-    font-family: 'Comfortaa', cursive; 
 }
 
 @media only screen and (max-width: 600px) {
-    .mobile-menu {
-        display: block;
-    }
     .desktop-menu {
-        display: none;
+        display: none; 
     }
+    .mobile-menu {
+        display: block; 
+    }
+    .menu-list {
+        display: none;
+      }
+      .menu-list ul li a {
+        text-decoration: none; 
+        color: #000; 
+        transition: color 0.3s; 
+      }
+      
+      .menu-list ul li a:hover {
+        text-decoration: underline;
+        color: #007bff; 
+      }
+      
+      
+      .mobile-menu.visible .menu-list {
+        display: block;
+      }
+      
 }
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding-left: 30px; 
+  }
+  
+  .search-button {
+    position: absolute;
+    left: 5px; 
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .search-button img {
+    vertical-align: middle; 
+    margin-right: 5px;
+  }
+  .search-results ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-results li:hover {
+    background-color: #e0e0e0;
+  }
+  
 
 
 
